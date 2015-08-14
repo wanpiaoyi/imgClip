@@ -52,7 +52,6 @@
     
     
     
-    
     self.scroll.minimumZoomScale = 1.0f;
     self.scroll.maximumZoomScale = 5.0f;
     self.scroll.bouncesZoom = YES;
@@ -71,7 +70,9 @@
     self.scroll.clipsToBounds = NO;
     
     self.lbl_topShow.frame = CGRectMake(0, 0, width, (height-60-self.midsize.height)/2);
-    
+    self.lbl_midShow.frame = CGRectMake(0, (height-60-self.midsize.height)/2, width, self.midsize.height);
+    self.lbl_midShow.layer.borderColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.6].CGColor;
+    self.lbl_midShow.layer.borderWidth = 1.0;
     self.lbl_bottomShow.frame = CGRectMake(0, height-60- (height-60-self.midsize.height)/2, width, (height-60-self.midsize.height)/2);
     
     [self.scroll setContentOffset:CGPointMake(0, (img_height-self.midsize.height)/2) animated:NO];
